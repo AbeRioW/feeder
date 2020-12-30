@@ -1,0 +1,46 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\test\feeder\feeder.uvproj
+Project File Date:  12/30/2020
+
+<h2>Output:</h2>
+Clean started: Project: 'feeder'
+   deleting intermediate output files for target 'stc8f2k08s2'
+Build target 'stc8f2k08s2'
+assembling STARTUP.A51...
+compiling led.c...
+compiling main.c...
+app\main.c(1): warning C318: can't open file 'led.h'
+APP\MAIN.C(6): warning C206: 'led_off': missing function-prototype
+APP\MAIN.C(7): warning C290: missing return value
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED_ON?LED
+Program Size: data=9.0 xdata=0 code=24
+creating hex file from ".\output\feeder"...
+".\output\feeder" - 0 Error(s), 4 Warning(s).
+Build target 'stc8f2k08s2'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED_ON?LED
+Program Size: data=9.0 xdata=0 code=24
+creating hex file from ".\output\feeder"...
+".\output\feeder" - 0 Error(s), 1 Warning(s).
+Build target 'stc8f2k08s2'
+compiling led.c...
+compiling spi_oled.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED_ON?LED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_DISPLAY_ON?SPI_OLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_DISPLAY_OFF?SPI_OLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?OLED_INIT?SPI_OLED
+Program Size: data=9.0 xdata=0 code=306
+creating hex file from ".\output\feeder"...
+".\output\feeder" - 0 Error(s), 4 Warning(s).
