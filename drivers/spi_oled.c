@@ -1,14 +1,47 @@
 #include "spi_oled.h"
-//OLED shows 
-//like this:
-//[0]0 1 2 3 ... 127	
-//[1]0 1 2 3 ... 127	
-//[2]0 1 2 3 ... 127	
-//[3]0 1 2 3 ... 127	
-//[4]0 1 2 3 ... 127	
-//[5]0 1 2 3 ... 127	
-//[6]0 1 2 3 ... 127	
-//[7]0 1 2 3 ... 127 
+
+
+
+#define OLED_CMD  0	//write cmd
+#define OLED_DATA 1	//write data
+
+sbit OLED_SCL=P1^0;//SCL
+sbit OLED_SDA=P1^1;//SDA
+sbit OLED_RES =P1^6;//RES
+sbit OLED_DC =P1^7;//DC
+sbit OLED_CS=P3^2; //CS
+
+
+#define OLED_SCL_Clr() OLED_SCL=0
+#define OLED_SCL_Set() OLED_SCL=1
+
+#define OLED_SDA_Clr() OLED_SDA=0
+#define OLED_SDA_Set() OLED_SDA=1
+
+#define OLED_RES_Clr() OLED_RES=0
+#define OLED_RES_Set() OLED_RES=1
+
+#define OLED_DC_Clr() OLED_DC=0
+#define OLED_DC_Set() OLED_DC=1
+
+#define OLED_CS_Clr()  OLED_CS=0
+#define OLED_CS_Set()  OLED_CS=1
+
+
+static void delay_ms(u32 ms);
+static void OLED_Init(void);
+static void OLED_Display_On(void);
+static void OLED_Display_Off(void);
+
+struct OLED spi_oled =
+{
+	0£¬
+	0£¬
+	OLED_Init,
+	OLED_Display_On,
+	OLED_Display_Off,
+}£»
+
 
 
 void delay_ms(u32 ms)
